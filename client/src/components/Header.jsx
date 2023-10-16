@@ -48,17 +48,15 @@ const Header = () => {
                                         <LinkContainer to="/profile">
                                             <NavDropdown.Item>Profile</NavDropdown.Item>
                                         </LinkContainer>
+                                        <LinkContainer to="/todos">
+                                            <NavDropdown.Item>View Todo</NavDropdown.Item>
+                                        </LinkContainer>
                                         <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
                                     </NavDropdown>
                                 </>
                             ) : (
                                 // Display navigation options for non-logged-in users
                                 <>
-                                    <LinkContainer to="/todos">
-                                        <Nav.Link>
-                                           Todos
-                                        </Nav.Link>
-                                    </LinkContainer>
                                     <LinkContainer to="/login">
                                         <Nav.Link>
                                             <FaSignInAlt /> Sign In

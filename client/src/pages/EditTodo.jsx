@@ -10,7 +10,7 @@ const EditTodo = () => {
 
   useEffect(() => {
     // Fetch the todo with the specified 'id' when the component mounts.
-    fetch(`https://mernstack-todo-app.onrender.com/api/todos/${id}`)
+    fetch(`/api/todos/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setTodo(data.todo); // Set the 'todo' state with the fetched data.
@@ -21,7 +21,7 @@ const EditTodo = () => {
 
   // Function to handle updating the todo.
   const onUpdateClick = () => {
-    fetch(`https://mernstack-todo-app.onrender.com/api/todos/${id}`, {
+    fetch(`/api/todos/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
