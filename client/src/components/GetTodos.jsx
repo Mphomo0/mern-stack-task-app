@@ -10,7 +10,10 @@ const GetTodos = () => {
     try {
       // Fetch todos from the server
       const response = await fetch("https://mernstack-todo-app.onrender.com/api/todos", {
-        method: 'GET'
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
       
       if (!response.ok) {
