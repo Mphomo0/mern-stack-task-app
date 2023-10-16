@@ -4,7 +4,7 @@ const DeleteTodo = () => {
     const handleDelete = async (id) => {
         try {
             // Send a DELETE request to the API endpoint for deleting the todo item
-            const response = await fetch(`/api/todos/${id}`);
+            const response = await fetch(`https://mernstack-todo-app.onrender.com/api/todos/${id}`);
       
             if (!response.ok) {
               throw new Error("Failed to delete the todo");

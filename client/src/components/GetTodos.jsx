@@ -18,7 +18,7 @@ const GetTodos = () => {
       }
 
       const data = await response.json();
-      console.log(data)
+      console.log(data.todos)
       setTodos(data.todos); // Set the retrieved todos in the state
     } catch (error) {
       console.error("Error fetching todos:", error);
