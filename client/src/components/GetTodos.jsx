@@ -9,7 +9,7 @@ const GetTodos = () => {
   const fetchTodos = async () => {
     try {
       // Fetch todos from the server
-      const response = await fetch("/api/todos", {
+      const response = await fetch("https://mernstack-todo-app.onrender.com/api/todos", {
         method: 'GET'
       });
       
