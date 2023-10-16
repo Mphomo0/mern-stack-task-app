@@ -29,7 +29,7 @@ app.use(cookieParser())
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://your-frontend.com"
+    "https://mernstack-todo-app.onrender.com/"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
