@@ -25,12 +25,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 
-const corsOptions ={
-  origin:'*', 
-  credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200,
-}
-app.use(cors(corsOptions))
+const corsOption = {
+  origin: ['https://mernstack-todo-app.onrender.com'],
+};
+app.use(cors(corsOption))
 
 app.use('/api/users', userRoutes)
 app.use('/api/todos', todoRoutes)
