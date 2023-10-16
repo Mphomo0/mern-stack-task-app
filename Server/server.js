@@ -15,9 +15,9 @@ const app = express()
 const path = require("path");
 // Serve static files from the "frontend/build" directory in production mode
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build")); // Serve static files from the "frontend/build" directory
+  app.use(express.static("client/dist")); // Serve static files from the "frontend/build" directory
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html")); // Serve the index.html file for all routes
+    res.sendFile(path.resolve(__dirname, "client", "dist", "index.html")); // Serve the index.html file for all routes
   });
 }
 
