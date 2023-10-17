@@ -13,7 +13,7 @@ const router = express.Router();
 router.post('/', createTodo);
 
 // GET request to retrieve all todo items
-router.get('/', getAllTodos);
+router.get('/list', getAllTodos);
 
 // GET request to retrieve a specific todo item by its unique 'id'
 router.get('/:id', getTodo);

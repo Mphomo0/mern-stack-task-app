@@ -8,7 +8,7 @@ const TodoScreen = () => {
   const fetchTodos = async () => {
     try {
       // Fetch todos from the server
-      const response = await fetch("https://mern-todo-52f9.onrender.com/api/todos", {
+      const response = await fetch("https://mern-todo-52f9.onrender.com/api/todos/list", {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
