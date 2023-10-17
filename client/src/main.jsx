@@ -19,6 +19,7 @@ import PrivateRoute from './components/PrivateRoute'
 import TodoScreen from './pages/TodoScreen'
 import TodoDetails from './pages/TodoDetails'
 import EditTodo from './pages/EditTodo'
+import AddTodo from './pages/AddTodo'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       <Route path='' element={<PrivateRoute />}>
         <Route path='/profile' element={<ProfileScreen />} />
         <Route path='/todos' element={<TodoScreen />} />
+        <Route path='/todos/add' element={<AddTodo />} />
         <Route path='/todos/:id' element={<TodoDetails />} />
         <Route path='/todos/edit/:id' element={<EditTodo />} />
       </Route>
