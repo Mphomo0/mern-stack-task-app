@@ -9,7 +9,7 @@ const TodoDetails = (props) => {
 
     useEffect(() => {
         // Fetch the details of the todo with the specified 'id' when the component mounts.
-        fetch('http://localhost:5000/api/todos/' + id)
+        fetch('https://mern-todo-52f9.onrender.com/api/todos/' + id)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data)
@@ -22,7 +22,7 @@ const TodoDetails = (props) => {
 
     // Function to handle the deletion of the todo.
     const onDeleteClick = (id) => {
-        fetch('http://localhost:5000/api/todos/' + id, {
+        fetch('https://mern-todo-52f9.onrender.com/api/todos/' + id, {
             method: 'DELETE', // Send a DELETE request to the server.
         })
             .then(res => {

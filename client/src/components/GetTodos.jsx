@@ -9,7 +9,7 @@ const GetTodos = () => {
   const fetchTodos = async () => {
     try {
       // Fetch todos from the server
-      const response = await fetch("http://localhost:5000/api/todos", {
+      const response = await fetch("https://mern-todo-52f9.onrender.com/api/todos", {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
