@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FormContainer from '../components/FormContainer'
 import { toast } from 'react-toastify';
+import { Form, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const AddTodo = () => {
     // Define state variables to manage the 'name' and 'description' input fields.
@@ -13,7 +15,7 @@ const AddTodo = () => {
 
     try {
       // Send a POST request to the server with the provided 'name' and 'description'.
-      const response = await fetch('https://mern-todo-52f9.onrender.com/api/todos', {
+      const response = await fetch('http://localhost:5000/api/todos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,6 +40,11 @@ const AddTodo = () => {
   };
   
   return (
+    <>
+     <div className='container'>
+                <h1>Todo Item</h1>
+                <Link to='/todos' className='btn btn-primary mt-3'>Back to List</Link> {/* Link to the list of todos. */}
+            </div>
     <FormContainer>
       <h1>Add your Todo List</h1>
 
@@ -66,6 +73,7 @@ const AddTodo = () => {
         </Button>
       </Form>
       </FormContainer>
+      </>
   )
 }
 

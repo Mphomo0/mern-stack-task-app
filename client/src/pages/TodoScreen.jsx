@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 const TodoScreen = () => {
   const [todos, setTodos] = useState([]); // State for storing todos
@@ -8,7 +9,7 @@ const TodoScreen = () => {
   const fetchTodos = async () => {
     try {
       // Fetch todos from the server
-      const response = await fetch("https://mern-todo-52f9.onrender.com/api/todos/list", {
+      const response = await fetch("http://localhost:5000/api/todos/", {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -20,7 +21,6 @@ const TodoScreen = () => {
       }
 
       const data = await response.json();
-      console.log(data.todos)
       setTodos(data.todos); // Set the retrieved todos in the state
     } catch (error) {
       console.error("Error fetching todos:", error);
@@ -35,6 +35,10 @@ const TodoScreen = () => {
 
   return (
     <>
+     <div className='container'>
+                <h1>Todo Item</h1>
+                <Link to='/add' className='btn btn-primary mt-3'>Add Todo</Link> {/* Add to the todos list. */}
+            </div>
       <div className="container">
         <div>
           <h2 className="text-center my-5">Todo List</h2>

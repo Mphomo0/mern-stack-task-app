@@ -44,12 +44,12 @@ const Header = () => {
                             {userInfo ? (
                                 // Display navigation options for logged-in users
                                 <>
-                                        <LinkContainer to="/todos">
-                                            <NavDropdown.Item>List Todos</NavDropdown.Item>
-                                        </LinkContainer>
                                     <NavDropdown title={userInfo.name} id="username">
                                         <LinkContainer to="/profile">
                                             <NavDropdown.Item>Profile</NavDropdown.Item>
+                                        </LinkContainer>
+                                        <LinkContainer to="/todos">
+                                            <NavDropdown.Item>List Todos</NavDropdown.Item>
                                         </LinkContainer>
                                         <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
                                     </NavDropdown>
