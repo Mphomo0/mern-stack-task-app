@@ -32,7 +32,7 @@ async function createTodo(req, res) {
 
 
 // Get all todos
-async function getAllTodos(req, res) {
+const getAllTodos = async (req, res) => {
     try {
         // Fetch all todos from the database
         const todos = await Todo.find();
