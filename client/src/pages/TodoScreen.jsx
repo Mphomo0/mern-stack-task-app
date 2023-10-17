@@ -15,7 +15,7 @@ const TodoScreen = () => {
 
     try {
       // Send a POST request to the server with the provided 'name' and 'description'.
-      const response = await fetch('https://mernstack-todo-app.onrender.com/api/todos', {
+      const response = await fetch('http://localhost:5000/api/todos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
