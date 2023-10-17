@@ -30,7 +30,7 @@ const router = createBrowserRouter(
       {/* Private Routes */}
       <Route path='' element={<PrivateRoute />}>
         <Route path='/profile' element={<ProfileScreen />} />
-        <Route path='/todos' element={<TodoScreen />} />
+        <Route path='/todos/list' element={<TodoScreen />} />
         <Route path='/add' element={<AddTodo />} />
         <Route path='/todos/:id' element={<TodoDetails />} />
         <Route path='/todos/edit/:id' element={<EditTodo />} />

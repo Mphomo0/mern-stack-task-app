@@ -22,7 +22,7 @@ const LoginScreen = () => {
     useEffect(() => {
         // Redirect to the '/todos' page if the user is already logged in.
         if(userInfo) {
-            navigate('/todos')
+            navigate('/todos/list')
         }
     }, [navigate, userInfo])
 
@@ -34,7 +34,7 @@ const LoginScreen = () => {
             const res = await login({email, password}).unwrap()
             // Dispatch the user credentials and navigate to the '/todos' page.
             dispatch(setCredentials({...res}))
-            navigate('/todos')
+            navigate('/todos/list')
         } catch (err) {
             // Display an error message based on the response data or the error itself.
             toast.error(err?.data?.message || err.error)

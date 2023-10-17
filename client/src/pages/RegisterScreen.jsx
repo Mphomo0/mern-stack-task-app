@@ -24,7 +24,7 @@ const RegisterScreen = () => {
     useEffect(() => {
         // Redirect to the '/todos' page if the user is already logged in.
         if(userInfo) {
-            navigate('/todos')
+            navigate('/todos/list')
         }
     }, [navigate, userInfo])
 
@@ -47,7 +47,7 @@ const RegisterScreen = () => {
                 const res = await register({name, email, password}).unwrap()
                 // Dispatch the user credentials and navigate to the '/todos' page.
                 dispatch(setCredentials({...res}))
-                navigate('/todos')
+                navigate('/todos/list')
             } catch (error) {
                 // Display an error message based on the response data or the error itself.
                 toast.error(error?.data?.message || error.error)
