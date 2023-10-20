@@ -11,8 +11,6 @@ const todoSchema = new mongoose.Schema(
         description: {
             type: String,
             required: true, // Description is required
-            minlength: 7, // Description must be at least 7 characters long
-            maxlength: 140, // Description can be at most 140 characters long
         },
     },
     {
